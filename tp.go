@@ -12,8 +12,12 @@ import (
 	"os"
 )
 
+var (
+	fLax = flag.Bool("lax", false, "allow missing keys")
+)
+
 func usage() {
-	fmt.Println("usage: tp <vars file> <template file>")
+	fmt.Println("usage: tp [-lax] <vars file> <template file>")
 	os.Exit(-1)
 }
 
@@ -39,6 +43,10 @@ func main() {
 
 	t, err := template.ParseFiles(tmplFile)
 	fatalIfError(err, "parsing template file")
+
+	if !*fLax {
+		t.Option("missingkey=error")
+	}
 
 	fatalIfError(t.Execute(os.Stdout, vars), "rendering template")
 }
