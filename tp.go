@@ -13,7 +13,7 @@ import (
 )
 
 func usage() {
-	fmt.Printf("usage: tp <vars file> <template file>")
+	fmt.Println("usage: tp <vars file> <template file>")
 	os.Exit(-1)
 }
 
