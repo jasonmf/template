@@ -1,6 +1,6 @@
 # tp - Template Processor
 
-`tp` is a trivial command-line template processor for golang/pkg/text/template. It takes its data as a JSON file specified in the first argument and the template specified in the second argument. Output is to stdout.
+`tp` is a trivial command-line template processor for [Go's text/template package](https://pkg.go.dev/text/template). It takes its data as a JSON file specified in the first argument and the template specified in the second argument. Output is to stdout.
 
 ## Building
 
