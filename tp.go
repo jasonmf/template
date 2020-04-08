@@ -6,10 +6,10 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"html/template"
 	"io/ioutil"
 	"log"
 	"os"
+	"text/template"
 )
 
 var (
